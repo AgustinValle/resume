@@ -5,5 +5,33 @@
     "info": "Programador Web",
     "icon": "fa-laptop"
   },
-  "info": "Mi nombre es Agustín Eduardo Valle, graduado de la carrera de tecnicatura superior en programación dictada en la universidad tecnológica nacional facultad regional Córdoba. No solo poseo los conocimientos impartidos en dicha institución, sino que además poseo las siguientes conocimientos extra curriculares: lenguaje en HTML5, CSS3, PHP5, C#, JS, AngularJs, Angular6, Bootstrap, SQL server, MySql, Oracle PL , entre otros. Además del uso de los siguientes programas: pack Office, pack Adobe CS6, Pack Corel Suit, Microsoft Studio, IntelliJ idea, entre otros. Y de web Apps como GitHub, Bitbucket, Asana, CodePen entre otros. Teniendo aptitudes de colaboración en el entorno laboral, creativo, proactivo, responsable,  dispuesto siempre a entregar lo mejor de mí para el bien común del equipo."
+  "info": "Mi nombre es Agustín Eduardo Valle, graduado de la carrera de tecnicatura superior en programación dictada en la universidad tecnológica nacional facultad regional Córdoba. No solo poseo los conocimientos impartidos en dicha institución, sino que además poseo las siguientes conocimientos extra curriculares: lenguaje en HTML5, CSS3, PHP5, C#, JS, AngularJs, Angular6, Bootstrap, SQL server, MySql, Oracle PL , entre otros. Además del uso de los siguientes programas: pack Office, pack Adobe CS6, Pack Corel Suit, Microsoft Studio, IntelliJ idea, entre otros. Y de web Apps como GitHub, Bitbucket, Asana, CodePen entre otros. Teniendo aptitudes de colaboración en el entorno laboral, creativo, proactivo, responsable,  dispuesto siempre a entregar lo mejor de mí para el bien común del equipo.",
+  "titles": {
+    "skills": {
+      "title": "Talentos",
+      "icon": "fa-glasses"
+    }
+  },
+  "skills": {
+    "js": {
+      "name": "Js",
+      "percentage": 85
+    },
+    "html": {
+      "name": "Html5",
+      "percentage": 99
+    },
+    "css": {
+      "name": "Css3",
+      "percentage": 95
+    },
+    "angularjs": {
+      "name": "AngularJs",
+      "percentage": 75
+    },
+    "sql": {
+      "name": "Sql",
+      "percentage": 75
+    }
+  }
 }

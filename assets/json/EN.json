@@ -5,11 +5,33 @@
     "info": "Web Developer",
     "icon": "fa-laptop"
   },
-  "info": "My is name, Agustín Valle, graduated from a higher technical degree in programming taught National Technological University of Cordoba,  I not only possess the knowledge imparted in that institution, but also I also have the following extracurricular knowledge: language in HTML5, CSS3, PHP5, C#, JS, AngularJs, Angular6, Bootstrap, SQL server, MySql, Oracle PL,  among others. In addition to the use of the following programs: Office pack, Adobe CS6 pack, Corel Suit Pack, Microsoft Studio, Microsoft SQL server, among others. Also web Apps like GitHub, Bitbucket, Asana, CodePen like others. Having skills of collaboration in the work environment, creative, proactive, responsible, always willing to deliver the best of me for the common good of the team.",
+  "info": "My is name, Agustín Valle, graduated from a higher technical degree in programming taught National Technological University of Cordoba,  I not only possess the knowledge imparted in that institution, but also I have the following extracurricular knowledge: language in HTML5, CSS3, PHP5, C#, JS, AngularJs, Angular6, Bootstrap, SQL server, MySql, Oracle PL, among others. In addition to the use of the following programs: Office pack, Adobe CS6 pack, Corel Suit Pack, Microsoft Studio, Microsoft SQL server, among others. Also web Apps like GitHub, Bitbucket, Asana, CodePen like others. Having skills of collaboration in the work environment, creative, proactive, responsible, always willing to deliver the best of me for the common good of the team.",
   "titles": {
     "skills": {
       "title": "Skills",
       "icon": "fa-glasses"
+    }
+  },
+  "skills": {
+    "js": {
+      "name": "Js",
+      "percentage": 85
+    },
+    "html": {
+      "name": "Html5",
+      "percentage": 99
+    },
+    "css": {
+      "name": "Css3",
+      "percentage": 95
+    },
+    "angularjs": {
+      "name": "AngularJs",
+      "percentage": 75
+    },
+    "sql": {
+      "name": "Sql",
+      "percentage": 75
     }
   }
 }
