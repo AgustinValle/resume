@@ -96,7 +96,7 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
 
 $(document).ready(function() {
 
-
+alert("yata");
     var styles = [
         'background: linear-gradient(#1e1e28, #27293d)'
         , 'border: 1px solid #3E0E02'
