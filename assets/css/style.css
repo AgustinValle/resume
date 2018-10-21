@@ -2,6 +2,56 @@ body{
     background: #1e1e28 !important;
     color: #cfd2da !important;
 }
+.grid-1 {
+    grid-area: grid-1;
+}
+.grid-2 {
+    grid-area: grid-2;
+}
+.grid-3 {
+    grid-area: grid-3;
+}
+.grid-4 {
+    grid-area: grid-4;
+}
+.grid-5 {
+    grid-area: grid-5;
+}
+.grid-6 {
+    grid-area: grid-6;
+}
+.grid-7 {
+    grid-area: grid-7;
+}
+.grid-8 {
+    grid-area: grid-8;
+}
+.grid-9 {
+    grid-area: grid-9;
+}
+.grid-10 {
+    grid-area: grid-10;
+}
+#loading {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: #1e1e28;
+    z-index: 999999;
+}
+#loading:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: #cfd2da;
+    width: 100%;
+    animation-name: loading;
+    animation-duration: 2s;
+}
+@keyframes loading {
+     0%   {width: 10%;}
+     100% {width: 100%;}
+ }
 .container {
     background: #27293d;
     left: 0;
@@ -12,7 +62,7 @@ body{
     position: absolute;
     margin-top: 20px;
     margin-bottom: 20px;
-    overflow: hidden;
+    height: 100%;
 }
 .top{
     font-family: 'Ubuntu', sans-serif;
@@ -69,14 +119,16 @@ body{
     opacity: .75 !important;
 }
 .skills-chart{
-    display: flex;
+    display: block;
     padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
     left: 0;
     right: 0;
     margin: auto;
-    position: absolute;
     width: 100%;
+    position: static;
+    height: 200px;
 }
 .col-xs-5ths,
 .col-sm-5ths,

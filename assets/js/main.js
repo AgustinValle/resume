@@ -96,7 +96,12 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
 
 $(document).ready(function() {
 
-alert("yata");
+function removeElement(id) {
+  var elem = document.getElementById(id);
+  return elem.parentNode.removeChild(elem);
+}
+removeElement('loading');
+
     var styles = [
         'background: linear-gradient(#1e1e28, #27293d)'
         , 'border: 1px solid #3E0E02'

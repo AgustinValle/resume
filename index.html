@@ -6,46 +6,67 @@
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cinzel|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" crossorigin="anonymous">
     <link href="http://www.landmarkmlp.com/js-plugin/owl.carousel/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="http://www.landmarkmlp.com/js-plugin/owl.carousel/owl-carousel/owl.theme.css" rel="stylesheet">
 </head>
 <body>
-
+<div id="loading"></div>
 <div class="container">
-    <div class="flag-container">
-        <img src="assets/img/blank.gif" class="flag flag-es" ng-click="loadLng('ES')" data-toggle="tooltip" data-placement="bottom" alt="ABC"/>
-        <img src="assets/img/blank.gif" class="flag flag-gb" ng-click="loadLng('EN')" data-toggle="tooltip" data-placement="bottom" alt="ABC"/>
-    </div>
-<div class="top topNombre">
-    <span>{{lng.head.name}}</span>
-</div>
-    <div class="top topTitulo">
-        <span>{{lng.head.info}} <i class="fas" ng-class="lng.head.icon"></i></span>
-    </div>
-    <div class="info-text">
-        <span> {{lng.info}} </span>
-    </div>
+    <section id="head" class="grid-1">
+        <div class="flag-container">
+            <img src="assets/img/blank.gif" class="flag flag-es" ng-click="loadLng('ES')" data-toggle="tooltip"
+                 data-placement="bottom" alt="ABC"/>
+            <img src="assets/img/blank.gif" class="flag flag-gb" ng-click="loadLng('EN')" data-toggle="tooltip"
+                 data-placement="bottom" alt="ABC"/>
+        </div>
+        <div class="top topNombre">
+            <span>{{lng.head.name}}</span>
+        </div>
+    </section>
+    <section id="info" class="grid-2">
+        <div class="top topTitulo">
+            <span>{{lng.head.info}} <i class="fas" ng-class="lng.head.icon"></i></span>
+        </div>
+        <div class="row">
+            <div class="info-text col-sm-12 col-md-4">
+                <img src="assets/img/blank.gif">
+            </div>
 
-    <div class="top topTitulo">
-        <span>{{lng.titles.skills.title}} <i class="fas" ng-class="lng.titles.skills.icon"></i></span>
-    </div>
-
-    <div class="skills-chart">
+            <div class="info-text col-sm-12 col-md-8">
+                <span> {{lng.info}} </span>
+            </div>
+        </div>
+    </section>
+    <section id="skill" class="grid-3">
+        <div class="top topTitulo">
+            <span>{{lng.titles.skills.title}} <i class="fas" ng-class="lng.titles.skills.icon"></i></span>
+        </div>
+        <div class="skills-chart">
             <div ng-repeat="sk in lng.skills" class="col-xs-6 col-md-5ths">
-                <canvas id="{{sk.name}}" ></canvas>
+                <canvas id="{{sk.name}}"></canvas>
                 <span>{{sk.name + " - " + sk.percentage + "%"}}</span>
             </div>
         </div>
+    </section>
+    <section id="w" class="grid-4">
+        <div class="top topTitulo">
+            <span>{{lng.titles.skills.title}} <i class="fas" ng-class="lng.titles.skills.icon"></i></span>
+        </div>
+    </section>
 </div>
 
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
 <script src="http://www.landmarkmlp.com/js-plugin/owl.carousel/owl-carousel/owl.carousel.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
