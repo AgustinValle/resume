@@ -102,6 +102,14 @@ function removeElement(id) {
 }
 removeElement('loading');
 
+
+    $(document).keypress(function(e) {
+        if (e.which === 119 ) {
+           alert("A")
+        }
+    });
+
+
     var styles = [
         'background: linear-gradient(#1e1e28, #27293d)'
         , 'border: 1px solid #3E0E02'

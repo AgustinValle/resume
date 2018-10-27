@@ -59,10 +59,10 @@ body{
     top: 0;
     bottom: 0;
     margin: auto;
-    position: absolute;
+    padding-bottom: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 100%;
+    padding-top: 20px;
 }
 .top{
     font-family: 'Ubuntu', sans-serif;
@@ -82,6 +82,26 @@ body{
     background: #cfd2da;
     font-size: 1.7em;
     color: #434356;
+}
+.topTitle{
+    background: #cfd2da;
+    background: url('../img/code.jpg');
+    font-size: 1.7em;
+    color: #434356;
+    height: 200px;
+    display: table;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    width: 100%;
+}
+.topSubtitle{
+    padding-left: 30px;
+    background-image: linear-gradient(to right, #cfd2da , #cfd2da4f);
+    display: table-cell;
+    vertical-align: middle;
+}
+.topSubtitle::first-letter {
+    text-decoration: underline;
 }
 .info-text{
     font-family: 'Cinzel', serif;
@@ -118,18 +138,7 @@ body{
 .flag-es:hover, .flag-pt:hover, .flag-gb:hover{
     opacity: .75 !important;
 }
-.skills-chart{
-    display: block;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    position: static;
-    height: 200px;
-}
+
 .col-xs-5ths,
 .col-sm-5ths,
 .col-md-5ths,
@@ -164,4 +173,84 @@ body{
         width: 20%;
         float: left;
     }
+}
+
+.ParallaxVideo{
+    height: 300px;
+    padding-bottom: 50px;
+    position:relative
+}
+.ParallaxVideo video{
+    width: 100%;
+    top:0;
+    z-index: -999;
+    margin-top: -300px;
+}
+
+.ParallaxVideo span{
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    padding: 80px;
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px #000000;
+}
+.skill-wrapper{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+.skill-table{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    border-radius: 10px;
+    background: #1e1e28;
+    margin: 20px 45px 30px 45px;
+    transition: .5s;
+}
+.skill-table:hover{
+    box-shadow: 0 0 19px -3px rgba(0,0,0,0.36);
+    transform: scale(1.05,1.05);
+    transition: .5s;
+}
+.skill-tabla-head{
+    padding: 20px;
+    font-size: 20px;
+    color: #434356;
+    background: #cfd2da;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+.skill-tabla-list{
+    padding: 30px;
+    color: #A0A0A0;
+    list-style: none;
+}
+.skill-tabla-list li{
+    padding: 15px;
+    border-bottom: 1px solid #C8C8C8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.skill-tabla-list li:last-child{
+    border: none;
+    padding-bottom: 0;
+}
+.skill-tabla-list li:first-child{
+    padding-top: 0;
+}
+.skill-bar-container{
+    width: 100%;
+    background-color: #ddd;
+    height: 2px;
+}
+.skill-bar-porcent{
+    background-color: #434356;
+    height: 2px;
+    width: 0;
+    transition: 1.5s;
 }

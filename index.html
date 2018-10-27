@@ -26,28 +26,38 @@
             <span>{{lng.head.name}}</span>
         </div>
     </section>
-    <section id="info" class="grid-2">
+    <section id="info" class="grid-2" style="overflow: hidden">
         <div class="top topTitulo">
-            <span>{{lng.head.info}} <i class="fas" ng-class="lng.head.icon"></i></span>
-        </div>
-        <div class="row">
-            <div class="info-text col-sm-12 col-md-4">
-                <img src="assets/img/blank.gif">
+        <span>{{lng.head.info}} <i class="fas" ng-class="lng.head.icon"></i></span>
+    </div>
+        <div class="row" style="overflow: hidden">
+            <div class="ParallaxVideo">
+
+                <span> {{lng.info}} </span>
+                <video autoplay muted loop>
+                    <source src="assets/video/code.mp4" type="video/mp4">
+                </video>
             </div>
 
-            <div class="info-text col-sm-12 col-md-8">
-                <span> {{lng.info}} </span>
-            </div>
         </div>
     </section>
     <section id="skill" class="grid-3">
-        <div class="top topTitulo">
-            <span>{{lng.titles.skills.title}} <i class="fas" ng-class="lng.titles.skills.icon"></i></span>
+        <div class="topTitle">
+            <div class="topSubtitle">{{lng.titles.skills.title}} <i class="fas" ng-class="lng.titles.skills.icon"></i></div>
         </div>
-        <div class="skills-chart">
-            <div ng-repeat="sk in lng.skills" class="col-xs-6 col-md-5ths">
-                <canvas id="{{sk.name}}"></canvas>
-                <span>{{sk.name + " - " + sk.percentage + "%"}}</span>
+        <div class=" row skill-wrapper">
+            <div class="skill-table col-md-3" ng-repeat="skill in lng.skills">
+                <h2 class="skill-tabla-head">{{"- "+ skill.name + " -"}}</h2>
+                <ul class="skill-tabla-list">
+                    <li ng-repeat="sk in skill.data">
+                        <div>
+                            <span>{{sk.name + "  " + sk.percentage + "%"}}</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-porcent" ng-style="{'width':sk.percentage + '%' }"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>

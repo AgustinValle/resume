@@ -13,25 +13,56 @@
     }
   },
   "skills": {
-    "js": {
-      "name": "Js",
-      "percentage": 85
+    "webDesigner":{
+      "name": "Web Design",
+      "data": {
+        "html": {
+          "name": "Html5",
+          "percentage": 95
+        },
+        "css": {
+          "name": "Css3",
+          "percentage": 95
+        },
+        "bootstrap": {
+          "name": "Bootstrap",
+          "percentage": 75
+        }
+      }
     },
-    "html": {
-      "name": "Html5",
-      "percentage": 99
+    "webProgrammer":{
+      "name": "Web Programmer",
+      "data": {
+        "js": {
+          "name": "Js",
+          "percentage": 85
+        },
+        "angularjs": {
+          "name": "AngularJs",
+          "percentage": 75
+        },
+        "sql": {
+          "name": "Sql",
+          "percentage": 75
+        }
+      }
     },
-    "css": {
-      "name": "Css3",
-      "percentage": 95
-    },
-    "angularjs": {
-      "name": "AngularJs",
-      "percentage": 75
-    },
-    "sql": {
-      "name": "Sql",
-      "percentage": 75
+    "personal":{
+      "name": "Personal Skills",
+      "data": {
+        "responsibility": {
+          "name": "Responsibility",
+          "percentage": 95
+        },
+        "creativity": {
+          "name": "Creativity",
+          "percentage": 85
+        },
+        "proactivity": {
+          "name": "Proactivity",
+          "percentage": 90
+        }
+      }
     }
   }
 }
