@@ -15,7 +15,7 @@
 <body>
 <div id="loading"></div>
 <div class="container">
-    <section id="head" class="grid-1">
+    <section id="head">
         <div class="flag-container">
             <img src="assets/img/blank.gif" class="flag flag-es" ng-click="loadLng('ES')" data-toggle="tooltip"
                  data-placement="bottom" alt="ABC"/>
@@ -26,7 +26,7 @@
             <span>{{lng.head.name}}</span>
         </div>
     </section>
-    <section id="info" class="grid-2" style="overflow: hidden">
+    <section id="info" style="overflow: hidden">
         <div class="top topTitulo">
         <span>{{lng.head.info}} <i class="fas" ng-class="lng.head.icon"></i></span>
     </div>
@@ -41,12 +41,12 @@
 
         </div>
     </section>
-    <section id="skill" class="grid-3">
+    <section id="skill">
         <div class="topTitle">
             <div class="topSubtitle">{{lng.titles.skills.title}} <i class="fas" ng-class="lng.titles.skills.icon"></i></div>
         </div>
         <div class=" row skill-wrapper">
-            <div class="skill-table col-md-3" ng-repeat="skill in lng.skills">
+            <div class="skill-table col-sm-10 col-md-3 " ng-repeat="skill in lng.skills">
                 <h2 class="skill-tabla-head">{{"- "+ skill.name + " -"}}</h2>
                 <ul class="skill-tabla-list">
                     <li ng-repeat="sk in skill.data">
@@ -61,9 +61,19 @@
             </div>
         </div>
     </section>
-    <section id="w" class="grid-4">
-        <div class="top topTitulo">
-            <span>{{lng.titles.skills.title}} <i class="fas" ng-class="lng.titles.skills.icon"></i></span>
+    <section id="education">
+        <div class="topTitle">
+            <div class="topSubtitle">{{lng.titles.education.title}} <i class="fas" ng-class="lng.titles.education.icon"></i></div>
+        </div>
+
+        <div class="col-md-8 list">
+            <div class="list-container" ng-repeat="education in lng.educations">
+                <p class="list-title">{{education.name}}</p>
+                <p class="list-date">{{education.year}}</p>
+                <p>
+                    {{education.info}}
+                </p>
+            </div>
         </div>
     </section>
 </div>

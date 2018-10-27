@@ -10,6 +10,10 @@
     "skills": {
       "title": "Skills",
       "icon": "fa-cogs"
+    },
+    "education": {
+      "title": "Education",
+      "icon": "fa-graduation-cap"
     }
   },
   "skills": {
@@ -63,6 +67,27 @@
           "percentage": 90
         }
       }
+    }
+  },
+  "educations": {
+    "university":{
+      "name": "Higher Technique in Programming at Argentine National Technology University",
+      "year": "2016",
+      "info": "Object-oriented programming. Use of the languages c #, java, asp, js, and others. Use of SQL, creation and structure of databases. Query optimization."
+    },
+    "seminar":{
+      "name": "Seminar on web 2.0 dictated by Microsoft",
+      "year": "2007"
+    },
+    "flashDesigner":{
+      "name": "Flash animation course at Cunix institute",
+      "year": "2007",
+      "info": "Course of animation and creation of websites with flash."
+    },
+    "webDesigner":{
+      "name": "Web design course at Cunix institute",
+      "year": "2006",
+      "info": "Course web design, layout and website structures."
     }
   }
 }
