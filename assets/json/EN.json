@@ -5,6 +5,12 @@
     "info": "Web Developer",
     "icon": "fa-laptop"
   },
+  "text":{
+    "portfolio": {
+      "stack": "Used stack",
+      "all": "All"
+    }
+  },
   "info": "My is name, Agustín Valle, graduated from a higher technical degree in programming taught National Technological University of Cordoba,  I not only possess the knowledge imparted in that institution, but also I have the following extracurricular knowledge: language in HTML5, CSS3, PHP5, C#, JS, AngularJs, Angular6, Bootstrap, SQL server, MySql, Oracle PL, among others. In addition to the use of the following programs: Office pack, Adobe CS6 pack, Corel Suit Pack, Microsoft Studio, Microsoft SQL server, among others. Also web Apps like GitHub, Bitbucket, Asana, CodePen like others. Having skills of collaboration in the work environment, creative, proactive, responsible, always willing to deliver the best of me for the common good of the team.",
   "titles": {
     "skills": {
@@ -14,10 +20,18 @@
     "education": {
       "title": "Education",
       "icon": "fa-graduation-cap"
+    },
+    "work": {
+      "title": "Work Experience",
+      "icon": "fa-briefcase"
+    },
+    "contact": {
+      "title": "Contact me",
+      "icon": "fa-phone-volume"
     }
   },
-  "skills": {
-    "webDesigner":{
+  "skills": [
+    {
       "name": "Web Design",
       "data": {
         "html": {
@@ -34,7 +48,7 @@
         }
       }
     },
-    "webProgrammer":{
+    {
       "name": "Web Programmer",
       "data": {
         "js": {
@@ -51,7 +65,7 @@
         }
       }
     },
-    "personal":{
+    {
       "name": "Personal Skills",
       "data": {
         "responsibility": {
@@ -68,26 +82,39 @@
         }
       }
     }
-  },
-  "educations": {
-    "university":{
+  ],
+  "educations": [
+    {
       "name": "Higher Technique in Programming at Argentine National Technology University",
       "year": "2016",
       "info": "Object-oriented programming. Use of the languages c #, java, asp, js, and others. Use of SQL, creation and structure of databases. Query optimization."
     },
-    "seminar":{
+    {
       "name": "Seminar on web 2.0 dictated by Microsoft",
       "year": "2007"
     },
-    "flashDesigner":{
+    {
       "name": "Flash animation course at Cunix institute",
       "year": "2007",
       "info": "Course of animation and creation of websites with flash."
     },
-    "webDesigner":{
+    {
       "name": "Web design course at Cunix institute",
       "year": "2006",
       "info": "Course web design, layout and website structures."
     }
+  ],
+  "portfolio": {
+    "text": "I am currently part of the 2Gsoft team, a company located in the city of Cordoba Argentina. dedicated to the development of web applications and software aimed at business management. Realizing the following projects:",
+    "types": ["Landing Page", "Web Application", "Mobile Application"],
+    "works": [ {
+        "title": "Marco Aurelio Sosa",
+        "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
+        "url": "www.google.com",
+        "img": "",
+        "type": "Web Application",
+        "tags": ["Html5", "Js", "AngularJs"]
+      }
+    ]
   }
 }

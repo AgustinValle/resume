@@ -11,8 +11,6 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
             url: 'assets/json/' + lng + '.json'
         }).then(function (response){
             $scope.lng = response.data;
-            setTimeout(function(){ $scope.skills() }, 500);
-
             console.log({loadlng: response, parameter: lng,status: 'OK'})
         },function (error){
             $scope.loadLng($scope.selectLng);

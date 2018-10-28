@@ -197,6 +197,7 @@ body{
     font-family: 'Ubuntu', sans-serif;
     text-shadow: 2px 2px #000000;
 }
+/*skill*/
 .skill-wrapper{
     font-family: 'Lato', sans-serif;
     text-align: center;
@@ -254,23 +255,21 @@ body{
     width: 0;
     transition: 1.5s;
 }
+/*List*/
 .list{
     margin: auto;
     padding: 50px;
 }
-.list-container:nth-child(even){
-
-}
-tr:nth-child(odd){
-
-}
-
 .list-container:nth-child(even){
     border-left: 2px solid #cfd2da;
     padding-left: 25px;
     padding-bottom: 50px;
     width: 50%;
     margin-left: auto;
+    background: #1e1e28;
+    padding-top: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .list-container:nth-child(even):before{
     width: 12px;
@@ -292,6 +291,10 @@ tr:nth-child(odd){
     margin-left: 2px;
     position: relative;
     text-align: right;
+    background: #1e1e28;
+    padding-top: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .list-container:nth-child(odd):before{
     width: 12px;
@@ -306,16 +309,13 @@ tr:nth-child(odd){
 }
 
 .list-title{
-    text-transform: uppercase;
     color: #cfd2da;
     font-size: 14px;
     line-height: 20px;
-    font-family: Roboto Mono,monospace;
     font-weight: 700;
     padding-bottom: 5px;
 }
 .list-date{
-    font-family: Inconsolata,monospace;
     font-size: 14px;
     line-height: 20px;
     color: #999;
@@ -324,4 +324,65 @@ tr:nth-child(odd){
 .list-container p {
     margin: 0;
 }
+/*portfolio*/
+.portfolio-container{
 
+}
+.portfolio-card{
+    transition: box-shadow .3s;
+    background: #434356;
+    display: flex;
+    margin: 40px 0;
+}
+.portfolio-card-img{
+    padding-right: 0;
+    padding-left: 0;
+}
+.portfolio-card-img img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.portfolio-card-info{
+    border-left: 1px solid #27293d;
+    padding: 50px 50px 40px 30px;
+}
+.portfolio-card-title{
+    font-size: 18px;
+    line-height: 30px;
+    font-family: Roboto Mono,monospace;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.portfolio-card-description{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 45px;
+}
+.portfolio-card-tags{
+    font-family: Roboto Mono,monospace;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.tags li, .work-menu-link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.14);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.portfolio-card-link{
+    margin-top: 55px;
+    font-family: Roboto Mono,monospace;
+    font-size: 14px;
+    line-height: 20px;
+    float: right;
+}

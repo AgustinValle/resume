@@ -1,37 +1,120 @@
 {
-  "webtitle": "Agustin Valle - Curriculum Vitae",
+  "webtitle": "Agustin Valle - Resume",
   "head": {
     "name": "Agustín Eduardo Valle",
-    "info": "Programador Web",
+    "info": "Web Developer",
     "icon": "fa-laptop"
   },
-  "info": "Mi nombre es Agustín Eduardo Valle, graduado de la carrera de tecnicatura superior en programación dictada en la universidad tecnológica nacional facultad regional Córdoba. No solo poseo los conocimientos impartidos en dicha institución, sino que además poseo las siguientes conocimientos extra curriculares: lenguaje en HTML5, CSS3, PHP5, C#, JS, AngularJs, Angular6, Bootstrap, SQL server, MySql, Oracle PL , entre otros. Además del uso de los siguientes programas: pack Office, pack Adobe CS6, Pack Corel Suit, Microsoft Studio, IntelliJ idea, entre otros. Y de web Apps como GitHub, Bitbucket, Asana, CodePen entre otros. Teniendo aptitudes de colaboración en el entorno laboral, creativo, proactivo, responsable,  dispuesto siempre a entregar lo mejor de mí para el bien común del equipo.",
-  "titles": {
-    "skills": {
-      "title": "Talentos",
-      "icon": "fa-cogs"
+  "text":{
+    "portfolio": {
+      "stack": "Used stack",
+      "all": "All"
     }
   },
-  "skills": {
-    "js": {
-      "name": "Js",
-      "percentage": 85
+  "info": "My is name, Agustín Valle, graduated from a higher technical degree in programming taught National Technological University of Cordoba,  I not only possess the knowledge imparted in that institution, but also I have the following extracurricular knowledge: language in HTML5, CSS3, PHP5, C#, JS, AngularJs, Angular6, Bootstrap, SQL server, MySql, Oracle PL, among others. In addition to the use of the following programs: Office pack, Adobe CS6 pack, Corel Suit Pack, Microsoft Studio, Microsoft SQL server, among others. Also web Apps like GitHub, Bitbucket, Asana, CodePen like others. Having skills of collaboration in the work environment, creative, proactive, responsible, always willing to deliver the best of me for the common good of the team.",
+  "titles": {
+    "skills": {
+      "title": "Skills",
+      "icon": "fa-cogs"
     },
-    "html": {
-      "name": "Html5",
-      "percentage": 99
+    "education": {
+      "title": "Education",
+      "icon": "fa-graduation-cap"
     },
-    "css": {
-      "name": "Css3",
-      "percentage": 95
+    "work": {
+      "title": "Work Experience",
+      "icon": "fa-briefcase"
     },
-    "angularjs": {
-      "name": "AngularJs",
-      "percentage": 75
-    },
-    "sql": {
-      "name": "Sql",
-      "percentage": 75
+    "contact": {
+      "title": "Contact me",
+      "icon": "fa-phone-volume"
     }
+  },
+  "skills": [
+    {
+      "name": "Web Design",
+      "data": {
+        "html": {
+          "name": "Html5",
+          "percentage": 95
+        },
+        "css": {
+          "name": "Css3",
+          "percentage": 95
+        },
+        "bootstrap": {
+          "name": "Bootstrap",
+          "percentage": 75
+        }
+      }
+    },
+    {
+      "name": "Web Programmer",
+      "data": {
+        "js": {
+          "name": "Js",
+          "percentage": 85
+        },
+        "angularjs": {
+          "name": "AngularJs",
+          "percentage": 75
+        },
+        "sql": {
+          "name": "Sql",
+          "percentage": 75
+        }
+      }
+    },
+    {
+      "name": "Personal Skills",
+      "data": {
+        "responsibility": {
+          "name": "Responsibility",
+          "percentage": 95
+        },
+        "creativity": {
+          "name": "Creativity",
+          "percentage": 85
+        },
+        "proactivity": {
+          "name": "Proactivity",
+          "percentage": 90
+        }
+      }
+    }
+  ],
+  "educations": [
+    {
+      "name": "Higher Technique in Programming at Argentine National Technology University",
+      "year": "2016",
+      "info": "Object-oriented programming. Use of the languages c #, java, asp, js, and others. Use of SQL, creation and structure of databases. Query optimization."
+    },
+    {
+      "name": "Seminar on web 2.0 dictated by Microsoft",
+      "year": "2007"
+    },
+    {
+      "name": "Flash animation course at Cunix institute",
+      "year": "2007",
+      "info": "Course of animation and creation of websites with flash."
+    },
+    {
+      "name": "Web design course at Cunix institute",
+      "year": "2006",
+      "info": "Course web design, layout and website structures."
+    }
+  ],
+  "portfolio": {
+    "text": "Actualmente soy parte del equipo de 2Gsoft, una empresa ubicada en la ciudad de cordoba argentina. dedicada al desarollo de aplicaciones web y software orientados a la gestion de empresas. Realizando los siguientes proyectos:",
+    "types": ["Landing Page", "Web Application", "Mobile Application"],
+    "works": [ {
+      "title": "MOBILE AND DESKTOP APP FOR LONDON HOSTEL STORE",
+      "text": "aplicación web para la solicitud de presupuestos para la empresa Marco Aurelio Sosa. con estilo de ecommerce para buscar una mayor afinidad con el usuario. contando con un listado de productos con distintas categorias y sub categorias. y un carrito de presupuesto final. ",
+      "url": "www.google.com",
+      "img": "",
+      "type": "landing-page",
+      "tags": ["Html5", "Js", "AngularJs"]
+    }
+    ]
   }
 }
