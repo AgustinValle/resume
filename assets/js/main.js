@@ -4,6 +4,7 @@
 var myApp = angular.module('myApp', []);
 myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
     $scope.selectLng = "EN";
+    $scope.portfolioFilter = "All";
 
     $scope.loadLng = function (lng) {
         $http({
@@ -11,17 +12,38 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
             url: 'assets/json/' + lng + '.json'
         }).then(function (response){
             $scope.lng = response.data;
-            console.log({loadlng: response, parameter: lng,status: 'OK'})
+            console.log({loadlng: response, parameter: lng,status: 'OK'});
+            $scope.getPortfolio();
         },function (error){
             $scope.loadLng($scope.selectLng);
             console.log({loadlng: error, parameter: lng, status: 'BAD'})
         });
     };
+    $scope.getPortfolio = function () {
+       /* var icon = document.getElementById('portfolio-btn-icon');
+        var btn = document.getElementById('portfolio-btn');
+        icon.classList.remove("fa-plus-circle");
+        icon.classList.add("fa-spinner fa-spin");
+        btn.classList.add("portfolio-btn-loading");*/
+        if(!$scope.portfolio){
+            $scope.portfolio = [];
+        }
+       // setTimeout(function(){
+            for(var i=0;i<2;i++){
+                $scope.portfolio.push($scope.lng.portfolio.works[$scope.portfolio.length])
+            }
+       //     }, 900);
+
+      /*  icon.classList.add("fa-plus-circle");
+        icon.classList.remove("fa-spinner fa-spin");
+        btn.classList.remove("portfolio-btn-loading");*/
+    };
+
+    $scope.changeFilter = function (e) {
+        $scope.portfolioFilter = e;
+    };
     $scope.loadLng($scope.selectLng);
 });
-
-
-
 
 
 
@@ -32,15 +54,11 @@ function removeElement(id) {
   return elem.parentNode.removeChild(elem);
 }
 removeElement('loading');
-
-
     $(document).keypress(function(e) {
         if (e.which === 119 ) {
            alert("A")
         }
     });
-
-
     var styles = [
         'background: linear-gradient(#1e1e28, #27293d)'
         , 'border: 1px solid #3E0E02'

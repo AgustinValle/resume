@@ -82,15 +82,15 @@
         </div>
 
 
-        <div class="work-title">{{lng.portfolio.text}}</div>
+        <div class="work-title">{{lng.portfolio.text}}</div>{{portfolioFilter}}
 
 
         <div class="row work-menu">
             <div class="col-md-12">
                 <nav>
                     <ul>
-                        <li class="work-menu-link" ng-class="work-menu-link-active">{{lng.text.portfolio.all}}</li>
-                        <li ng-repeat="type in lng.portfolio.types" class="work-menu-link" ng-class="work-menu-link-active">{{type}}</li>
+                        <li class="work-menu-link" ng-click="portfolioFilter = 'All'" ng-class="work-menu-link-active">{{lng.text.portfolio.all}}</li>
+                        <li ng-repeat="type in lng.portfolio.types" ng-click="changeFilter(type)" class="work-menu-link" ng-class="work-menu-link-active">{{type}}</li>
                     </ul>
                 </nav>
             </div>
@@ -98,9 +98,9 @@
 
 
         <div class="portfolio-container">
-            <div class=" portfolio-card" ng-repeat="work in lng.portfolio.works">
+            <div class=" portfolio-card" ng-repeat="work in portfolio" ng-if="portfolioFilter == work.type || portfolioFilter == 'All'">
                 <div class="col-md-6 col-lg-5 portfolio-card-img">
-                    <img class="" ng-src="assets/img/work.img" alt="{{work.title}}">
+                    <img class="" ng-src="assets/img/portfolio/{{work.img}}" alt="{{work.title}}">
                 </div>
                 <div class="col-md-6 col-lg-7 portfolio-card-info">
                     <h3 class="portfolio-card-title">{{work.title}}  </h3>
@@ -111,20 +111,19 @@
                     <ul class="tags">
                         <li ng-repeat="tag in work.tags">{{tag}}</li>
                     </ul>
-                    <a ng-href="work.url" ng-if="work.url" class="portfolio-card-link">{{work.url}}</a>
+                    <a ng-href="{{'http://' + work.url}}" target="_blank" ng-if="work.url" class="portfolio-card-link">{{work.url}}</a>
                 </div>
             </div>
+            <div class="portfolio-btn-more" ng-click="getPortfolio()" ng-if="portfolio.length < lng.portfolio.works.length" id="portfolio-btn"><i class="fas fa-plus-circle" id="portfolio-btn-icon"></i></div>
         </div>
-
-
-
-
-
-
-
-
-
     </section>
+
+    <section id="contact">
+        <div class="topTitle">
+            <div class="topSubtitle">{{lng.titles.contact.title}} <i class="fas" ng-class="lng.titles.contact.icon"></i></div>
+        </div>
+    </section>
+
 </div>
 
 

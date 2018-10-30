@@ -110,10 +110,50 @@
     "works": [ {
         "title": "Marco Aurelio Sosa",
         "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
+        "url": "marcoaureliososa.com.ar",
+        "img": "sosa.png",
+        "type": "Web Application",
+        "tags": ["Html5", "Js", "AngularJs"]
+      },
+      {
+        "title": "Braver Web App",
+        "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
+
+        "img": "",
+        "type": "Web Application",
+        "tags": ["Html5", "Css3", "Js", "TypeScript","Angular5", "Google Maps API"]
+      },
+      {
+        "title": "Catar",
+        "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
+
+        "img": "",
+        "type": "Web Application",
+        "tags": ["Html5", "Css3", "Js", "TypeScript", "Angular5", "Google Maps API"]
+      },
+      {
+        "title": "Braver Mobile App",
+        "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
+
+        "img": "",
+        "type": "Mobile Application",
+        "tags": ["Html5", "Css3", "Js","AngularJs", "Cordoba"]
+      },
+      {
+        "title": "Grupo Geo",
+        "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
+        "url": "www.google.com",
+        "img": "",
+        "type": "Landing page",
+        "tags": ["Html5", "Css3", "Js", "Wordpress"]
+      },
+      {
+        "title": "Grupo Sar",
+        "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
         "url": "www.google.com",
         "img": "",
         "type": "Web Application",
-        "tags": ["Html5", "Js", "AngularJs"]
+        "tags": ["Html5", "Css3", "Js", "AngularJs"]
       }
     ]
   }

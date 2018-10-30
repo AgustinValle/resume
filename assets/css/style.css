@@ -378,6 +378,8 @@ body{
     padding: 5px 10px;
     margin-right: 10px;
     border-radius: 3px;
+    cursor: pointer;
+    color: #434356
 }
 .portfolio-card-link{
     margin-top: 55px;
@@ -385,4 +387,18 @@ body{
     font-size: 14px;
     line-height: 20px;
     float: right;
+}
+.portfolio-btn-more{
+    text-align: center;
+    font-size: 2em;
+    width: 35px;
+    margin: -40px auto;
+    cursor: pointer;
+    transition: .5s;
+    padding-bottom: 60px;
+    padding-top: 20px;
+}
+.portfolio-btn-more:hover, .portfolio-btn-loading{
+    font-size: 2.5em;
+    transition: .5s;
 }
