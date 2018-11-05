@@ -1,0 +1,31 @@
+:root {
+    --dark-1: #1e1e28;
+
+
+    --light-1: #cfd2da;
+    --light-2: linear-gradient(35deg, #ffffff, #ececec);;
+}
+
+body{
+    background: var(--dark-1) !important;
+    color: var(--light-1) !important;
+}
+nav{
+    background: var(--light-1);
+    color: var(--dark-1);
+}
+
+.section-container{
+    background-image: var(--light-2);
+}
+/*loading*/
+#loading {
+    background: var(--dark-1);
+}
+#loading:before {
+    background:  var(--light-1);
+}
+/*info*/
+.info-grid a{
+    color: var(--light-1);
+}

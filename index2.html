@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl" ng-cloak>
+<head>
+    <meta charset="UTF-8">
+    <title>{{lng.webtitle}}</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cinzel|Ubuntu|Exo+2" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" crossorigin="anonymous">
+    <link href="http://www.landmarkmlp.com/js-plugin/owl.carousel/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="http://www.landmarkmlp.com/js-plugin/owl.carousel/owl-carousel/owl.theme.css" rel="stylesheet">
+</head>
+<body>
+<div id="loading"></div>
+
+<!--nav>
+    <ul>
+        <li>home</li>
+        <li ng-repeat="title in lng.titles">{{title.title}}</li>
+    </ul>
+</nav-->
+
+<section id="head">
+    <div class="ParallaxVideo">
+        <div class="info-grid">
+
+            <div class="grid-1"><h1>{{lng.head.name}}</h1><br>
+                <h2>{{lng.head.info.title}}</h2></div>
+            <div class="grid-3"><h6>{{lng.text.info.age + ':'}}</h6></div>
+            <div class="grid-4"><h6><strong>{{lng.head.info.years}}</strong></h6></div>
+            <div class="grid-5"><h6>{{lng.text.info.nationality + ':'}}</h6></div>
+            <div class="grid-6"><h6><strong>{{lng.head.info.nationality}}</strong></h6></div>
+            <div class="grid-7"><h6>{{lng.text.contact.mail + ':'}}</h6></div>
+            <div class="grid-8"><h6><a href="mailto:{{lng.contact.mail}}"><strong>{{lng.contact.mail}}</strong></a></h6>
+            </div>
+            <div class="grid-9"><h6>{{lng.text.contact.phone + ':'}}</h6></div>
+            <div class="grid-10"><h6><a
+                    href="https://wa.me/{{lng.contact.phone}}"><strong>{{lng.contact.phone_format}}</strong></a></h6>
+            </div>
+        </div>
+
+
+        <video autoplay muted loop>
+            <source src="assets/video/code.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+<section style="min-height: inherit;">
+    <div class="mid mid-quote">
+        {{lng.info}}
+    </div>
+</section>
+<section id="skill">
+
+    <div class="topTitle">
+        <div class="topSubtitle">{{lng.titles.skills.title}} <i class="fas" ng-class="lng.titles.skills.icon"></i></div>
+    </div>
+
+    <div class="section-container">
+        <div class=" row skill-wrapper">
+            <div class="skill-table col-sm-10 col-md-3 " ng-repeat="skill in lng.skills">
+                <h2 class="skill-tabla-head">{{"- "+ skill.name + " -"}}</h2>
+                <ul class="skill-tabla-list">
+                    <li ng-repeat="sk in skill.data">
+                        <div>
+                            <span>{{sk.name + "  " + sk.percentage + "%"}}</span>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar-porcent" ng-style="{'width':sk.percentage + '%' }"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mid mid-quote">
+        {{lng.info}}
+    </div>
+</section>
+<section id="education">
+    <div class="topTitle">
+        <div class="topSubtitle">{{lng.titles.education.title}} <i class="fas" ng-class="lng.titles.education.icon"></i>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="col-md-8 education">
+            <div class="education-container" ng-repeat="education in lng.educations">
+                <p class="education-title">{{education.name}}</p>
+                <p class="education-date">{{education.year}}</p>
+                <p>{{education.info}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="mid mid-quote">
+        {{lng.info}}
+    </div>
+</section>
+<section id="work">
+    <div class="topTitle">
+        <div class="topSubtitle">{{lng.titles.work.title}} <i class="fas" ng-class="lng.titles.work.icon"></i></div>
+    </div>
+    <div class="section-container">
+
+        <div class="mid mid-info" style=" margin-top: -10%;">
+            {{lng.portfolio.text}}
+        </div>
+
+        <div class="row work-menu">
+            <div class="col-md-12" style="display: -webkit-box;">
+                <div class="work-menu-link" ng-click="portfolioFilter = 'All'" ng-class="work-menu-link-active">
+                    {{lng.text.portfolio.all}}
+                </div>
+                <div ng-repeat="type in lng.portfolio.types" ng-click="changeFilter(type)" class="work-menu-link"
+                     ng-class="work-menu-link-active">{{type}}
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row portfolio-content">
+            <div class="col-md-4 portfolio-item" ng-repeat="work in portfolio"
+                 ng-if="portfolioFilter == work.type || portfolioFilter == 'All'">
+                <div class="portfolio-card">
+                    <div class="portfolio-card-img">
+                        <img ng-src="assets/img/portfolio/{{work.img}}" alt="{{work.title}}">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <h3 class="title">{{work.title}}</h3>
+                        <p class="info"> {{work.text}}</p>
+                        <a ng-href="{{'http://' + work.url}}" target="_blank" ng-if="work.url"
+                           class="url">{{work.url}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-btn-more" ng-click="getPortfolio()"
+                 ng-if="portfolio.length < lng.portfolio.works.length" id="portfolio-btn"><i class="fas fa-plus-circle"
+                                                                                             id="portfolio-btn-icon"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="topTitle">
+        <div class="topSubtitle">{{lng.titles.contact.title}} <i class="fas" ng-class="lng.titles.contact.icon"></i></div>
+    </div>
+<div class="section-container">
+
+    <div class="row contact-container">
+        <div class="col-sm-12 col-md-4"></div>
+        <div class="col-sm-12 col-md-8">
+            <form>
+
+                <div class="form-group">
+                    <label for="name">{{lng.text.contact.name}}</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="name" placeholder="{{lng.text.contact.name}}" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            {{lng.text.contact.error + ' ' + lng.text.contact.name}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mail">{{lng.text.contact.mail}}</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                        </div>
+                        <input type="email" class="form-control" id="mail" placeholder="{{lng.text.contact.mail}}" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            {{lng.text.contact.error + ' ' + lng.text.contact.mail}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">{{lng.text.contact.phone}}</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                        </div>
+                        <input type="tel" class="form-control" id="phone" placeholder="{{lng.text.contact.phone}}" aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            {{lng.text.contact.error + ' ' + lng.text.contact.phone}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">{{lng.text.contact.message}}</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <button class="btn btn-primary" type="submit">{{lng.text.contact.send}}</button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
+<script src="http://www.landmarkmlp.com/js-plugin/owl.carousel/owl-carousel/owl.carousel.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-29051841-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-29051841-1');
+</script>
+
+</body>
+</html>

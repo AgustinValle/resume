@@ -14,24 +14,20 @@
 </head>
 <body>
 <div id="loading"></div>
-<div class="container">
-    <section id="head">
-        <div class="flag-container">
-            <img src="assets/img/blank.gif" class="flag flag-es" ng-click="loadLng('ES')" data-toggle="tooltip"
-                 data-placement="bottom" alt="ABC"/>
-            <img src="assets/img/blank.gif" class="flag flag-gb" ng-click="loadLng('EN')" data-toggle="tooltip"
-                 data-placement="bottom" alt="ABC"/>
-        </div>
-        <div class="top topNombre">
-            <span>{{lng.head.name}}</span>
-        </div>
-    </section>
+<div class="">
+    <nav>
+        <ul>
+            <li>home</li>
+        </ul>
+    </nav>
     <section id="info" style="overflow: hidden">
-        <div class="top topTitulo">
-        <span>{{lng.head.info}} <i class="fas" ng-class="lng.head.icon"></i></span>
-    </div>
         <div class="row" style="overflow: hidden">
             <div class="ParallaxVideo">
+
+                <div class="info">
+                        <div>{{lng.head.name}}</div>
+                        <div>{{lng.head.info}}</div>
+                </div>
 
                 <span> {{lng.info}} </span>
                 <video autoplay muted loop>
@@ -122,6 +118,8 @@
         <div class="topTitle">
             <div class="topSubtitle">{{lng.titles.contact.title}} <i class="fas" ng-class="lng.titles.contact.icon"></i></div>
         </div>
+
+
     </section>
 
 </div>

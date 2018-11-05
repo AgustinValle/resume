@@ -2,13 +2,29 @@
   "webtitle": "Agustin Valle - Resume",
   "head": {
     "name": "Agustín Eduardo Valle",
-    "info": "Web Developer",
+    "info": {
+      "title": "Front end development",
+      "age": "1991/04/18",
+      "nationality": "Argentinean"
+    },
     "icon": "fa-laptop"
   },
   "text":{
+    "info": {
+      "age": "Age",
+      "nationality": "Nationality"
+    },
     "portfolio": {
       "stack": "Used stack",
       "all": "All"
+    },
+    "contact": {
+      "name": "Name",
+      "mail": "E-mail",
+      "phone": "Phone",
+      "message": "Message",
+      "send": "Send",
+      "error": "Please provide a valid"
     }
   },
   "info": "My is name, Agustín Valle, graduated from a higher technical degree in programming taught National Technological University of Cordoba,  I not only possess the knowledge imparted in that institution, but also I have the following extracurricular knowledge: language in HTML5, CSS3, PHP5, C#, JS, AngularJs, Angular6, Bootstrap, SQL server, MySql, Oracle PL, among others. In addition to the use of the following programs: Office pack, Adobe CS6 pack, Corel Suit Pack, Microsoft Studio, Microsoft SQL server, among others. Also web Apps like GitHub, Bitbucket, Asana, CodePen like others. Having skills of collaboration in the work environment, creative, proactive, responsible, always willing to deliver the best of me for the common good of the team.",
@@ -113,7 +129,7 @@
         "url": "marcoaureliososa.com.ar",
         "img": "sosa.png",
         "type": "Web Application",
-        "tags": ["Html5", "Js", "AngularJs"]
+        "tags": ["Html5", "Js", "AngularJs", "Google Analytics API"]
       },
       {
         "title": "Braver Web App",
@@ -142,19 +158,24 @@
       {
         "title": "Grupo Geo",
         "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
-        "url": "www.google.com",
-        "img": "",
-        "type": "Landing page",
+        "url": "grupogeoin.com.ar",
+        "img": "geo.png",
+        "type": "Landing Page",
         "tags": ["Html5", "Css3", "Js", "Wordpress"]
       },
       {
         "title": "Grupo Sar",
         "text": "Web application for the request of budgets for the company Marco Aurelio Sosa. with ecommerce style to look for a greater affinity with the user. with a list of products with different categories and sub categories. and a final budget cart.",
-        "url": "www.google.com",
-        "img": "",
+        "url": "gruposar.com.ar",
+        "img": "sar.png",
         "type": "Web Application",
         "tags": ["Html5", "Css3", "Js", "AngularJs"]
       }
     ]
+  },
+  "contact": {
+    "mail": "agusstin91@gmail.com",
+    "phone_format": "+54-9-(351)-314-0396",
+    "phone": "5493513140396"
   }
 }

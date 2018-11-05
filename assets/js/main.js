@@ -14,6 +14,7 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
             $scope.lng = response.data;
             console.log({loadlng: response, parameter: lng,status: 'OK'});
             $scope.getPortfolio();
+            $scope.lng.head.info.years = $scope.birthday();
         },function (error){
             $scope.loadLng($scope.selectLng);
             console.log({loadlng: error, parameter: lng, status: 'BAD'})
@@ -29,7 +30,7 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
             $scope.portfolio = [];
         }
        // setTimeout(function(){
-            for(var i=0;i<2;i++){
+            for(var i=0;i<3;i++){
                 $scope.portfolio.push($scope.lng.portfolio.works[$scope.portfolio.length])
             }
        //     }, 900);
@@ -43,6 +44,12 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
         $scope.portfolioFilter = e;
     };
     $scope.loadLng($scope.selectLng);
+
+    $scope.birthday = function () {
+        var diff_ms = Date.now() - new Date($scope.lng.head.info.age);
+        var age_dt = new Date(diff_ms);
+        return Math.abs(age_dt.getUTCFullYear() - 1970);
+    }
 });
 
 
@@ -53,6 +60,9 @@ function removeElement(id) {
   var elem = document.getElementById(id);
   return elem.parentNode.removeChild(elem);
 }
+   /* $.scrollify({
+        section : "section"
+    });*/
 removeElement('loading');
     $(document).keypress(function(e) {
         if (e.which === 119 ) {

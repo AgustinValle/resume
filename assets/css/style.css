@@ -1,37 +1,9 @@
+
 body{
     background: #1e1e28 !important;
     color: #cfd2da !important;
 }
-.grid-1 {
-    grid-area: grid-1;
-}
-.grid-2 {
-    grid-area: grid-2;
-}
-.grid-3 {
-    grid-area: grid-3;
-}
-.grid-4 {
-    grid-area: grid-4;
-}
-.grid-5 {
-    grid-area: grid-5;
-}
-.grid-6 {
-    grid-area: grid-6;
-}
-.grid-7 {
-    grid-area: grid-7;
-}
-.grid-8 {
-    grid-area: grid-8;
-}
-.grid-9 {
-    grid-area: grid-9;
-}
-.grid-10 {
-    grid-area: grid-10;
-}
+/*loading*/
 #loading {
     width: 100vw;
     height: 100vh;
@@ -52,6 +24,7 @@ body{
      0%   {width: 10%;}
      100% {width: 100%;}
  }
+/*home*/
 .container {
     background: #27293d;
     left: 0;
@@ -176,7 +149,7 @@ body{
 }
 
 .ParallaxVideo{
-    height: 300px;
+    height: 100vh;
     padding-bottom: 50px;
     position:relative
 }
@@ -184,7 +157,6 @@ body{
     width: 100%;
     top:0;
     z-index: -999;
-    margin-top: -300px;
 }
 
 .ParallaxVideo span{
@@ -192,10 +164,10 @@ body{
     width: 100%;
     position: absolute;
     text-align: center;
-    padding: 80px;
-    height: 100%;
+    padding: 100px;
+    bottom: 0;
     font-family: 'Ubuntu', sans-serif;
-    text-shadow: 2px 2px #000000;
+    text-shadow: 2px 2px #000;
 }
 /*skill*/
 .skill-wrapper{
