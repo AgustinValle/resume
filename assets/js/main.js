@@ -45,6 +45,17 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
     };
     $scope.loadLng($scope.selectLng);
 
+
+    $scope.php = function () {
+        $http({
+            method: 'GET',
+            url: 'assests/php/mail.php'
+        }).then(function (response){
+            console.log(response)
+        });
+    };
+    $scope.php();
+
     $scope.birthday = function () {
         var diff_ms = Date.now() - new Date($scope.lng.head.info.age);
         var age_dt = new Date(diff_ms);
