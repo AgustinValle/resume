@@ -49,15 +49,17 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
     $scope.mail = function () {
         $http({
             method: 'POST',
-            url: 'assets/php/mail.php',
+            url: 'https://docs.google.com/forms/d/e/1FAIpQLSd2s7RE-6FjsYji65bQeTE_grq2N2pdyT74eQ-cWa5orywz_A/viewform?usp=pp_url&entry.16199284='+$scope.contact.item.mail+'&entry.503416706='+$scope.contact.item.name+'&entry.2069927019='+$scope.contact.item.phone+'&entry.155775088='+$scope.contact.item.message+'&submit=Submit',
             /*params: {
+             https://docs.google.com/forms/d/e/1FAIpQLSd2s7RE-6FjsYji65bQeTE_grq2N2pdyT74eQ-cWa5orywz_A/viewform?usp=pp_url&entry.16199284=Email&entry.503416706=Name&entry.2069927019=Phone&entry.155775088=Message
                 name: $scope.contact.item.name,
                 mail: $scope.contact.item.mail,
                 phone: $scope.contact.item.phone,
                 message: $scope.contact.item.message
             }*/
         }).then(function (response){
-            console.log("🙌🙌🙌")
+            console.log("🙌🙌🙌");
+            console.log(response);
         });
     };
 
