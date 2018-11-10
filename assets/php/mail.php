@@ -1,5 +1,5 @@
 <?php
-$name = $_GET["name"];
+/*$name = $_GET["name"];
 $mail = $_GET["mail"];
 $phone = $_GET["phone"];
 $message = $_GET["message"];
@@ -29,5 +29,7 @@ $body = "
 </html>
 ";
 $headers = "From: ".$mail;
-mail($to,$subject,$body,$headers);
+mail($to,$subject,$body,$headers);*/
+
+mail("agusstin91@gmail.com","test","hola");
 echo true;
