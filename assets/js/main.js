@@ -46,15 +46,20 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
     $scope.loadLng($scope.selectLng);
 
 
-    $scope.php = function () {
+    $scope.mail = function () {
         $http({
             method: 'GET',
-            url: 'assets/php/mail.php'
+            url: 'assets/php/mail.php',
+            params: {
+                name: $scope.contact.item.name,
+                mail: $scope.contact.item.mail,
+                phone: $scope.contact.item.phone,
+                message: $scope.contact.item.message
+            }
         }).then(function (response){
-            console.log(response)
+            console.log("🙌🙌🙌")
         });
     };
-    $scope.php();
 
     $scope.birthday = function () {
         var diff_ms = Date.now() - new Date($scope.lng.head.info.age);
