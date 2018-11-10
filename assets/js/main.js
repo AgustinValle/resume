@@ -49,7 +49,7 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
     $scope.php = function () {
         $http({
             method: 'GET',
-            url: '/assets/php/mail.php'
+            url: 'assets/php/mail.php'
         }).then(function (response){
             console.log(response)
         });
