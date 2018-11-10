@@ -31,5 +31,16 @@ $body = "
 $headers = "From: ".$mail;
 mail($to,$subject,$body,$headers);*/
 
-mail("agusstin91@gmail.com","test","hola");
-echo true;
+
+$recipient_email    = "agusstin91@gmail.com";
+$from_email         = "agusstin91@gmail.com";
+$headers = "From:".$from_email."\r\n".
+    "Reply-To: asd@gmail.com \n" .
+    "X-Mailer: PHP/" . phpversion();
+$sentMail = mail($recipient_email, "test", "hola", $headers);
+if($sentMail)
+{
+    echo ('success');
+    exit;
+}
+else echo "mal";
