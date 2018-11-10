@@ -48,14 +48,14 @@ myApp.controller('myCtrl', function ($scope, $http, $rootScope) {
 
     $scope.mail = function () {
         $http({
-            method: 'GET',
+            method: 'POST',
             url: 'assets/php/mail.php',
-            params: {
+            /*params: {
                 name: $scope.contact.item.name,
                 mail: $scope.contact.item.mail,
                 phone: $scope.contact.item.phone,
                 message: $scope.contact.item.message
-            }
+            }*/
         }).then(function (response){
             console.log("🙌🙌🙌")
         });
